@@ -1,0 +1,38 @@
+{
+  "fruits": {
+    "apple": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Honeycrisp.jpg"
+    },
+    "kiwi": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Kiwi1.1.jpg"
+    },
+    "mango": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Sindhri_Mango.JPG"
+    },
+    "coconut": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Coconut_4.jpg"
+    },
+    "plum": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/24/Red-Plums.jpg"
+    },
+    "banana": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Bananas_white_background_DS.jpg"
+    },
+    "guava": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Guava_ID.jpg"
+    }
+  },
+  "list": [
+    "apple",
+    "kiwi",
+    "banana",
+    "mango",
+    "mango",
+    "banana",
+    "coconut",
+    "apple",
+    "plum",
+    "banana",
+    "guava"
+  ]
+}
