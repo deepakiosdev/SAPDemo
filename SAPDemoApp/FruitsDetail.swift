@@ -64,8 +64,8 @@ struct FruitsDetail: Decodable {
 }
 
 struct Fruit: Decodable {
-    var name: String
-    var url : String
+    let name: String
+    let url : String
     
      enum FruitKeys: CodingKey {
         case url

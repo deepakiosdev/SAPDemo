@@ -40,7 +40,7 @@ class ImageViewController: UIViewController {
         let request = URLRequest.init(url: url)
         
         URLSession.shared.dataTask(with: request) { [weak self] (data, response, error) in
-            
+            print("Image downloaded using UrlSession...")
             DispatchQueue.main.async {
                 if error == nil && data != nil {
                     
@@ -54,26 +54,17 @@ class ImageViewController: UIViewController {
     
     
     private func downloadImageUsingContentData(_ url: URL) {
-               DispatchQueue.global().async { [weak self] in
+        DispatchQueue.global().async { [weak self] in
             if let imageData = try? Data(contentsOf: url) {
-                
+                print("Image downloaded using contentsOf url...")
                 DispatchQueue.main.async {
                     self?.imageView.image = UIImage.init(data: imageData)
                     self?.activityIndicator.stopAnimating()
                 }
+            } else {
+                print("Image Not downloaded using contentsOf url...")
             }
         }
     }
     
-    /*private func downloadImageUsingContentData(_ url: URL) {
-        
-        DispatchQueue.global().async {
-            if let imageData = try? Data(contentsOf: url) {    6y
-                DispatchQueue.main.async {
-                    self.imageView.image = UIImage.init(data: imageData)
-                    self.activityIndicator.stopAnimating()
-                }
-            }
-        }
-    }*/
 }
