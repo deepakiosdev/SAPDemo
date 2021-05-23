@@ -49,15 +49,15 @@ struct FruitsDetail: Decodable {
         var tempArray = [Fruit]()
         
         // 2
-        // Loop through each key (student ID) in container
+        // Loop through each key (Fruit Name) in container
         for key in nestedContainer.allKeys {
-            // Decode Student using key & keep decoded Student object in tempArray
+            // Decode Fruit using key & keep decoded Fruit object in tempArray
             let decodedObject = try nestedContainer.decode(Fruit.self, forKey: DynamicCodingKeys(stringValue: key.stringValue)!)
             tempArray.append(decodedObject)
         }
         
         // 3
-        // Finish decoding all Student objects. Thus assign tempArray to array.
+        // Finish decoding all Fruit objects. Thus assign tempArray to array.
         fruits = tempArray
     }
     
